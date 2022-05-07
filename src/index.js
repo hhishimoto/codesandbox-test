@@ -213,5 +213,25 @@ const newNmaeArr = nameArr.map((name) => {
     return `${name}さん`;
   }
 });
-
 console.log(newNmaeArr);
+
+/**
+ * 三項演算子
+ */
+console.log("---------- 三項演算子 ----------");
+
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+const val20 = 1 > 0 ? "trueです" : "falseです";
+console.log(val20);
+
+// const num20 = 1300;
+const num20 = "1300";
+const formattedNum =
+  typeof num20 === "number" ? num20.toLocaleString() : "数値を入力してください";
+console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+};
+console.log(checkSum(10, 30));
+console.log(checkSum(50, 60));
