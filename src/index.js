@@ -235,3 +235,29 @@ const checkSum = (num1, num2) => {
 };
 console.log(checkSum(10, 30));
 console.log(checkSum(50, 60));
+
+/**
+ * 論理演算子の本当の意味を知ろう
+ */
+console.log("---------- 論理演算子の本当の意味を知ろう ----------");
+
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("1か2はtrueになります");
+}
+
+if (flag1 && flag2) {
+  console.log("1も2はtrueになります");
+}
+
+// ||は左側がfalseなら右側を返す
+const num21 = null;
+const fee = num21 || "金額未設定です";
+console.log(fee);
+
+// &&は左側がtrueなら右側を返す
+const num22 = 100;
+const fee22 = num22 && "何か設定されました";
+console.log(fee22);
