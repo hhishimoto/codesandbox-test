@@ -108,3 +108,26 @@ console.log(func4("func4(アロー関数)です"));
 // アロー関数で足し算
 const func5 = (num1, num2) => num1 + num2;
 console.log(func5(10, 20));
+
+/**
+ * 分割代入
+ */
+console.log("---------- 分割代入 ----------");
+
+const myProfile = {
+  name: "なまえ",
+  age: 38
+};
+
+const message3 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+console.log(message3);
+const { name2, age2 } = myProfile;
+const message4 = `名前は${name2}でーす。年齢は${age2}歳でーす。`;
+console.log(message4);
+
+const myProfile2 = ["なまえ", 38];
+const message5 = `名前は${myProfile2[0]}です。年齢は${myProfile2[1]}歳です。`;
+console.log(message5);
+const [name3, age3] = myProfile2;
+const message6 = `名前は${name3}でーす。年齢は${age3}歳でーす。`;
+console.log(message6);
