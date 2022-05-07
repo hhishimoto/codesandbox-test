@@ -44,7 +44,7 @@ console.log(val3);
 //　constで定義したオブジェクトはプロパティの変更が可能
 const val4 = {
   name: "名前",
-  age: 38
+  age: 38,
 };
 console.log(val4);
 
@@ -116,7 +116,7 @@ console.log("---------- 分割代入 ----------");
 
 const myProfile = {
   name: "なまえ",
-  age: 38
+  age: 38,
 };
 
 const message3 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
@@ -178,3 +178,39 @@ console.log(arr7);
 const arr8 = arr4;
 arr8[0] = 100;
 console.log(arr4);
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+console.log("---------- mapやfilterを使った配列の処理 ----------");
+
+const nameArr = ["田中", "山田", "鈴木"];
+
+// 従来の取り出し
+for (var i = 0; i < nameArr.length; i++) {
+  console.log(nameArr[i]);
+}
+
+// mapを使って取り出し
+const nameArr2 = nameArr.map((name) => console.log(name));
+
+// mapの順番
+const nameArr3 = nameArr.map((name, index) =>
+  console.log(`${index + 1}番目は${name}です。`)
+);
+
+// filterで抽出
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1;
+});
+console.log(newNumArr);
+
+const newNmaeArr = nameArr.map((name) => {
+  if (name === "山田") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNmaeArr);
