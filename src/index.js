@@ -213,4 +213,5 @@ const newNmaeArr = nameArr.map((name) => {
     return `${name}さん`;
   }
 });
+
 console.log(newNmaeArr);
